@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Mhb1Ly_JxNRWgv-w_",
+      });
+   })();
+</script>
+    <script src="validation.js" defer></script>
+    <title>Sign up</title>
+</head>
+<body>
+<div class="wrapper">
+    <h1>Sign up</h1> 
+    <p id="error-message"></p>
+    <form id="form">
+         <div>
+            <label for="firstname-input">
+                <i class='bx bxs-virus' ></i>
+            </label>
+            <input type="text" name="Firstname" id="firstname-input" placeholder="Username" >
+         </div>
+
+
+         <div>
+            <label for="email-input"><i class='bx bx-mail-send' ></i></label>
+            <input type="email" name="Email" id="email-input" placeholder="E mail" >
+         </div>
+
+
+         <div>
+            <label for="password-input"><i class='bx bxs-lock' ></i></label>
+            <input type="password" name="Password" id="password-input" placeholder="Password ">
+            <i class='bx bx-hide password-toggle'></i>
+         </div>
+
+
+         <div>
+            <label for="repeat-Password"><i class='bx bxs-lock-alt' ></i></label>
+            <input type="password" name="repeat-Password" id="repeat-password" placeholder="Repeat Password ">
+            <i class='bx bx-hide password-toggle'></i>
+         </div>
+
+         <button type="submit" class="btn">Sign up</button> 
+    </form>
+    <p>Already Have An Account .?<a href="Login.html">Login !</a></p>
+</div> 
+    
+</body>
+</html>

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); 
+:root{
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+} 
+html{
+    font-size: 12pt;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+
+}
+body{
+    min-height: 100vh;
+    background: url('signup.jpg') no-repeat;
+    background-size: cover;
+}
+
+.wrapper{
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
+    height: 100vh;
+    width: max(40%, 600px);
+    padding: 10px;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}   
+
+#error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+form{
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+} 
+form div label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px; 
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 10px 0 0 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+form div input {
+    box-sizing: border-box;
+    flex-grow:1;
+    min-width: 0;
+    padding: 1em ;
+    font: inherit;  
+    width: 100%;
+    height: 50px;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+    border: 2px solid var(--primary-color);
+    background-color: rgb(235, 235, 235);
+    transition: 150ms ease;
+    padding-right: 2.5em;
+}
+form input:hover{
+    border: 2px solid var(--primary-color);
+}   
+
+
+form button{
+    margin-top:10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: var(--primary-color) ;
+    color: var(--secondary-color);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+button:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+} 
+
+a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}   
+@media (max-width: 1100px){
+   .wrapper{
+    width: min(600px, 100%);
+    border-radius: 0;
+   }
+}
+
+form div .Incorrect label{
+    background-color: red;
+}
+form div .Incorrect input{
+    border: 2px solid red;
+} 
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
